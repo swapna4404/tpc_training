@@ -7,9 +7,17 @@ int main()
 	getline(cin,str);
 	for(int i=0;i<str.length();i++)
 	{
-		if(str[i]!=' ')
+		if(i==0 && str[i]==' ')
 		{
-			cout<<str[i];
+			continue;
 		}
+		if(str[i]==' ')
+		{
+			if(str[i-1]==' ')
+			{
+				continue;	
+			}	
+		}
+		cout<<str[i];
 	}
 }
