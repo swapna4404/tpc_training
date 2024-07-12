@@ -10,6 +10,7 @@ int main()
 		cin>>a[i];
 	}
 	cin>>target;
+	int count=0;
 	bool f=0;
 	for(int i=0;i<n;i++)
 	{
@@ -17,12 +18,13 @@ int main()
 		{
 			if(a[i]+a[j]==target)
 			{
-				cout<<i<<" "<<j<<endl;
+				count++;
 				f=1;
 				break;
 			}
 		}
 	}
+	cout<<count<<endl;
 	if(f)
 	{
 		cout<<"yes";
